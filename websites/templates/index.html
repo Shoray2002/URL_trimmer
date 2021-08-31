@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Url_shortner</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form method="post">
+      <input
+        type="url"
+        class="form-control form-control-lg"
+        name="url"
+      />
+      <input type="submit" class="btn btn-primary btn-lg" value="Shorten" />
+    </form>
+
+    <h2><a href="{{in_url}}" target="_blank">{{in_url}}</a></h2>
+    <h2><a href="{{out_url}}" target="_blank">{{out_url}}</a></h2>
+    <h1><img src="https://chart.googleapis.com/chart?chs=500x500&amp;cht=qr&amp;chl={{out_url}}" /></h1>
+  </body>
+</html>

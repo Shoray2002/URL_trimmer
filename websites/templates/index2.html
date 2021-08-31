@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LordShoray's URL Trimmer</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
+  </head>
+  <body>
+      {% if in_url %}
+      <div id="content">
+        <form method="post">
+          <input type="url" name="url" class="input" id="search-input" />
+
+          <button type="reset" class="search" id="search-btn"></button>
+        </form>
+      </div>
+      
+      <div class="links">
+        <h1>Original Link</h1>
+        <h2><a href="{{in_url}}" target="_blank">{{in_url}}</a></h2>
+        <h1>Trimmed Link</h1>
+        <h2><a href="{{out_url}}" target="_blank">{{out_url}}</a></h2>
+      </div>
+      
+      <div class="code">
+        <h1>Trimmed QR Code</h1>
+        <h1>
+          <a href="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl={{out_url}}" target="_blank"
+           download>
+          <img
+            src="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl={{out_url}}"
+          /></a>
+       </h1>
+      </div>
+      {%else%}
+      <div id="content" style="top:35%;">
+        <form method="post">
+          <input type="url" name="url" class="input" id="search-input" />
+
+          <button type="reset" class="search" id="search-btn"></button>
+        </form>
+      </div>
+      <div class="links" style="padding-top: 40vh;">
+        <h1 style=" font-size: 3.5rem;">Enter an URL you want to trim</h1>
+      </div>
+      
+      {% endif %}
+   
+
+    <script>
+      const input = document.getElementById("search-input");
+      const searchBtn = document.getElementById("search-btn");
+      const expand = () => {
+        searchBtn.classList.toggle("close");
+        input.classList.toggle("square");
+      };
+
+      searchBtn.addEventListener("click", expand);
+    </script>
+    
+  </body>
+</html>
