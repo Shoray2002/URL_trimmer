@@ -26,7 +26,7 @@ def index():
             table=Table(in_url=in_url,out_url=out_url)
             db.session.add(table)
             db.session.commit()
-        out_url= '/'+out_url
+        out_url= 'https://lordshoray-url-trimmer.herokuapp.com/'+out_url
         return render_template('index2.html',in_url=in_url,out_url=out_url)
     
     return render_template('index2.html')
