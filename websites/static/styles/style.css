@@ -1,21 +1,21 @@
 html {
-    margin: 0;
+  margin: 0;
   padding: 0;
 }
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background: rgb(0, 0, 0);        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 255, 0.062);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 1px solid rgb(56, 56, 56);  /* creates padding around scroll thumb */
-  }
-  
+  width: 12px; /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(0, 0, 0); /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 255, 0.062); /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 1px solid rgb(56, 56, 56); /* creates padding around scroll thumb */
+}
+
 body {
   background-color: #000000;
   color: #fff;
@@ -24,6 +24,9 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center; */
+}
+.links span {
+  color: rgb(255, 0, 0);
 }
 
 .links {
@@ -48,7 +51,6 @@ img {
   font-style: italic;
   color: #fff;
   font-size: 1.4rem;
-  padding: 0 0.5rem;
 }
 form {
   display: block;
@@ -57,8 +59,16 @@ h1 {
   padding-bottom: 0;
   margin: 0;
   font-size: 2.5rem;
+  text-align: center;
 }
-
+.links h2 {
+  text-align: center;
+  padding-left: 20vh;
+  padding-right: 20vh;
+}
+.links a {
+  color: #66ff00;
+}
 #content {
   position: absolute;
   height: 50px;
